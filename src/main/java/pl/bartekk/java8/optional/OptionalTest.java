@@ -1,4 +1,4 @@
-package pl.bartekk.java8;
+package pl.bartekk.java8.optional;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
@@ -27,7 +27,6 @@ public class OptionalTest {
         Optional<String> opt = Optional.of(name);
         assertTrue(opt.isPresent());
         assertEquals("Optional[Bartek]", opt.toString());
-
     }
 
     @Test(expectedExceptions = NullPointerException.class)
