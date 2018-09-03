@@ -1,4 +1,4 @@
-package pl.bartekk.sorting;
+package pl.bartekk.basicAlgorithms.sorting;
 
 import java.util.Arrays;
 
