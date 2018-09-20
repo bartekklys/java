@@ -13,8 +13,9 @@ public class DeadlockExample {
                 System.out.println("Thread 1: locked resource 1");
 
                 try {
-                    Thread.sleep(100);
-                } catch (Exception e) {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
 
                 synchronized (resource2) {
@@ -29,8 +30,9 @@ public class DeadlockExample {
                 System.out.println("Thread 2: locked resource 2");
 
                 try {
-                    Thread.sleep(100);
-                } catch (Exception e) {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
 
                 synchronized (resource1) {
@@ -38,7 +40,6 @@ public class DeadlockExample {
                 }
             }
         });
-
 
         t1.start();
         t2.start();
