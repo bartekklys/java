@@ -1,5 +1,11 @@
 package pl.bartekk.concurrency;
 
+/**
+ * Deadlock in java is a part of multithreading. Deadlock can occur in a situation when a thread
+ * is waiting for an object lock, that is acquired by another thread and second thread is waiting
+ * for an object lock that is acquired by first thread. Since, both threads are waiting for each
+ * other to release the lock, the condition is called deadlock.
+ */
 public class DeadlockExample {
 
     public static void main(String[] args) {
